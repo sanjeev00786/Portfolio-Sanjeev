@@ -4,7 +4,7 @@ let navbar = document.querySelector('.navbar');
 
 menuIcon.addEventListener('click', function() {
     menuIcon.classList.toggle('bx-x')
-    navbar.classList.toggle('active')
+    navbar.classList.toggle('navBarActive')
 })
 
 /*========== scroll sections active link ==========*/
@@ -33,7 +33,8 @@ window.onscroll = () => {
 
 
     /*========== remove menu icon navbar when click navbar link (scroll) ==========*/
-
+    menuIcon.classList.remove('bx-x')
+    navbar.classList.remove('navBarActive')
 };
 
 
@@ -51,10 +52,25 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
     }
-
 })
 
 /*========== dark light mode ==========*/
+let darkModeIcon = document.querySelector('#darkMode-icon');
 
+darkModeIcon.addEventListener('click', function() {
+    darkModeIcon.classList.toggle('bx-sun')
+    document.body.classList.toggle('dark-mode')
+})
 
 /*========== scroll reveal ==========*/
+ScrollReveal({ 
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+})
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' })
+ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' })
+ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' })
+ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' })
