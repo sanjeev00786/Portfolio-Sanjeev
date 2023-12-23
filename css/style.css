@@ -874,11 +874,10 @@ span {
 
     .home-content {
         position: relative;
-        top: 0px;
+        top: 10px;
     }
 
     .profession-box {
-        position: relative;
-        top: 410px;
+        top: 450px !important;
     }
 }
