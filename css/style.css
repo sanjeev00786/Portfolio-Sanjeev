@@ -871,4 +871,14 @@ span {
         text-align: center;
         margin-top: 2rem;
     }
+
+    .home-content {
+        position: relative;
+        top: 0px;
+    }
+
+    .profession-box {
+        position: relative;
+        top: 410px;
+    }
 }
