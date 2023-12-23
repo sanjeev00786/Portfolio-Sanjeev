@@ -892,4 +892,8 @@ span {
     .profession-box {
         top: 450px !important;
     }
+
+    h2 {
+        font-size: 3rem !important;
+    }
 }
