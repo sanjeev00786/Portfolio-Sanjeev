@@ -877,6 +877,18 @@ span {
         top: 10px;
     }
 
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
     .profession-box {
         top: 450px !important;
     }
