@@ -55,12 +55,12 @@ var swiper = new Swiper(".mySwiper", {
 })
 
 /*========== dark light mode ==========*/
-let darkModeIcon = document.querySelector('#darkMode-icon');
+// let darkModeIcon = document.querySelector('#darkMode-icon');
 
-darkModeIcon.addEventListener('click', function() {
-    darkModeIcon.classList.toggle('bx-sun')
-    document.body.classList.toggle('dark-mode')
-})
+// darkModeIcon.addEventListener('click', function() {
+//     darkModeIcon.classList.toggle('bx-sun')
+//     document.body.classList.toggle('dark-mode')
+// })
 
 /*========== scroll reveal ==========*/
 ScrollReveal({ 
@@ -74,3 +74,17 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' })
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' })
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' })
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' })
+
+
+function animateText() {
+    const spans = document.querySelectorAll('.animated-text span');
+    spans.forEach((span, index) => {
+        const delay = index * 400; // Adjust the delay as needed
+        setTimeout(() => {
+            span.style.animationDelay = `${delay}ms`;
+            span.style.animationPlayState = 'running';
+        }, delay);
+    });
+}
+
+animateText()
